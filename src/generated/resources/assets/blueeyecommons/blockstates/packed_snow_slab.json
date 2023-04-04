@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "blueeyecommons:block/packed_snow_slab"
+    },
+    "type=double": {
+      "model": "blueeyecommons:block/packed_snow"
+    },
+    "type=top": {
+      "model": "blueeyecommons:block/packed_snow_slab_top"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "blueeyecommons:block/packed_snow_tiles"
+  }
+}

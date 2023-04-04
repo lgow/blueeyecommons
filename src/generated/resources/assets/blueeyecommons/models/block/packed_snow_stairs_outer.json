@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "blueeyecommons:block/packed_snow",
+    "side": "blueeyecommons:block/packed_snow",
+    "top": "blueeyecommons:block/packed_snow"
+  }
+}
