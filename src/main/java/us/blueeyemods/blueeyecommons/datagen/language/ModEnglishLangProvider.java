@@ -12,7 +12,7 @@ public class ModEnglishLangProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add(ModCreativeModeTabs.TAB1.getDisplayName().getString(), "Blue-Eye Commons: Cold Biomes");
+        add(ModCreativeModeTabs.TAB.getDisplayName().getString(), "Blue-Eye Commons: Cold Biomes");
         add(ModBlocks.PACKED_SNOW.get(), "Packed Snow");
         add(ModBlocks.PACKED_SNOW_SLAB.get(), "Packed Snow Slab");
         add(ModBlocks.PACKED_SNOW_STAIRS.get(), "Packed Snow Stairs");

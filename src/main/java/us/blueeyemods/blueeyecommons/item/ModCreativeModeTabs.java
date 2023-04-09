@@ -12,11 +12,11 @@ import us.blueeyemods.blueeyecommons.block.ModBlocks;
 
 @Mod.EventBusSubscriber(modid = Main.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModCreativeModeTabs {
-    public static CreativeModeTab TAB1;
+    public static CreativeModeTab TAB;
 
     @SubscribeEvent
     public static void registerCreativeModeTabs(CreativeModeTabEvent.Register event) {
-        TAB1 = event.registerCreativeModeTab(new ResourceLocation(Main.MODID, "cold_biome_blocks"),
+        TAB = event.registerCreativeModeTab(new ResourceLocation(Main.MODID, "cold_biome_blocks"),
                 builder -> builder.icon(() -> new ItemStack(ModBlocks.PACKED_SNOW.get().asItem()))
                         .title(Component.translatable("creativemodetab.cold_biome_blocks")));
     }
