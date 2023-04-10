@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "blueeyecommons:block/packed_snow_bricks",
-    "side": "blueeyecommons:block/packed_snow_bricks",
-    "top": "blueeyecommons:block/packed_snow_bricks"
-  }
-}

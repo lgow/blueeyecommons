@@ -9,8 +9,7 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import us.blueeyemods.blueeyecommons.Main;
-import us.blueeyemods.blueeyecommons.datagen.language.ModEnglishLangProvider;
-import us.blueeyemods.blueeyecommons.datagen.language.ModRussianLangProvider;
+import us.blueeyemods.blueeyecommons.datagen.language.LangProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,12 +23,11 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> provider = event.getLookupProvider();
         String modid = Main.MODID.toString();
 
-        generator.addProvider(true, new ModRecipeProvider(packOutput));
-        generator.addProvider(true, ModLootTableProvider.create(packOutput));
-        generator.addProvider(true, new ModBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(true, new ModItemModelProvider(packOutput, existingFileHelper));
-        generator.addProvider(true, new ModBlockTagsProvider(packOutput, provider, modid, existingFileHelper));
-        generator.addProvider(true, new ModEnglishLangProvider(packOutput, modid, "en_us"));
-        generator.addProvider(true, new ModRussianLangProvider(packOutput, modid, "ru_ru"));
+        generator.addProvider(true, new RecipeProvider(packOutput));
+        generator.addProvider(true, LootTableProvider.create(packOutput));
+        generator.addProvider(true, new BlockStatesProvider(packOutput, existingFileHelper));
+        generator.addProvider(true, new ItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(true, new BlockTagsProvider(packOutput, provider, modid, existingFileHelper));
+        generator.addProvider(true, new LangProvider(packOutput, modid, "en_us"));
     }
 }

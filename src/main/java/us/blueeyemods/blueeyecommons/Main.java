@@ -12,9 +12,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-import us.blueeyemods.blueeyecommons.block.ModBlocks;
+import us.blueeyemods.blueeyecommons.init.BlockInit;
 import us.blueeyemods.blueeyecommons.item.ModCreativeModeTabs;
-import us.blueeyemods.blueeyecommons.item.ModItems;
+import us.blueeyemods.blueeyecommons.init.ItemInit;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Main.MODID)
@@ -24,8 +24,8 @@ public class Main {
 
     public Main() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
+        ItemInit.register(modEventBus);
+        BlockInit.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -36,34 +36,34 @@ public class Main {
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS || event.getTab() == ModCreativeModeTabs.TAB) {
-            event.accept(ModBlocks.PACKED_SNOW);
-            event.accept(ModBlocks.PACKED_SNOW_STAIRS);
-            event.accept(ModBlocks.PACKED_SNOW_SLAB);
-            event.accept(ModBlocks.PACKED_SNOW_WALL);
-            event.accept(ModBlocks.CHISELED_PACKED_SNOW);
-            event.accept(ModBlocks.PACKED_SNOW_BRICKS);
-            event.accept(ModBlocks.PACKED_SNOW_BRICK_STAIRS);
-            event.accept(ModBlocks.PACKED_SNOW_TILES);
-            event.accept(ModBlocks.PACKED_SNOW_TILE_STAIRS);
-            event.accept(ModBlocks.PACKED_SNOW_PILLAR);
-            event.accept(ModBlocks.PACKED_ICE_STAIRS);
-            event.accept(ModBlocks.PACKED_ICE_SLAB);
-            event.accept(ModBlocks.PACKED_ICE_WALL);
-            event.accept(ModBlocks.CHISELED_PACKED_ICE);
-            event.accept(ModBlocks.PACKED_ICE_BRICKS);
-            event.accept(ModBlocks.CRACKED_PACKED_ICE_BRICKS);
-            event.accept(ModBlocks.PACKED_ICE_TILES);
-            event.accept(ModBlocks.CRACKED_PACKED_ICE_TILES);
-            event.accept(ModBlocks.PACKED_ICE_PILLAR);
-            event.accept(ModBlocks.BLUE_ICE_STAIRS);
-            event.accept(ModBlocks.BLUE_ICE_SLAB);
-            event.accept(ModBlocks.BLUE_ICE_WALL);
-            event.accept(ModBlocks.CHISELED_BLUE_ICE);
-            event.accept(ModBlocks.BLUE_ICE_BRICKS);
-            event.accept(ModBlocks.CRACKED_BLUE_ICE_BRICKS);
-            event.accept(ModBlocks.BLUE_ICE_TILES);
-            event.accept(ModBlocks.CRACKED_BLUE_ICE_TILES);
-            event.accept(ModBlocks.BLUE_ICE_PILLAR);
+            event.accept(BlockInit.PACKED_SNOW);
+            event.accept(BlockInit.PACKED_SNOW_STAIRS);
+            event.accept(BlockInit.PACKED_SNOW_SLAB);
+            event.accept(BlockInit.PACKED_SNOW_WALL);
+            event.accept(BlockInit.CHISELED_PACKED_SNOW);
+            event.accept(BlockInit.PACKED_SNOW_BRICKS);
+            event.accept(BlockInit.PACKED_SNOW_BRICK_STAIRS);
+            event.accept(BlockInit.PACKED_SNOW_TILES);
+            event.accept(BlockInit.PACKED_SNOW_TILE_STAIRS);
+            event.accept(BlockInit.PACKED_SNOW_PILLAR);
+            event.accept(BlockInit.PACKED_ICE_STAIRS);
+            event.accept(BlockInit.PACKED_ICE_SLAB);
+            event.accept(BlockInit.PACKED_ICE_WALL);
+            event.accept(BlockInit.CHISELED_PACKED_ICE);
+            event.accept(BlockInit.PACKED_ICE_BRICKS);
+            event.accept(BlockInit.CRACKED_PACKED_ICE_BRICKS);
+            event.accept(BlockInit.PACKED_ICE_TILES);
+            event.accept(BlockInit.CRACKED_PACKED_ICE_TILES);
+            event.accept(BlockInit.PACKED_ICE_PILLAR);
+            event.accept(BlockInit.BLUE_ICE_STAIRS);
+            event.accept(BlockInit.BLUE_ICE_SLAB);
+            event.accept(BlockInit.BLUE_ICE_WALL);
+            event.accept(BlockInit.CHISELED_BLUE_ICE);
+            event.accept(BlockInit.BLUE_ICE_BRICKS);
+            event.accept(BlockInit.CRACKED_BLUE_ICE_BRICKS);
+            event.accept(BlockInit.BLUE_ICE_TILES);
+            event.accept(BlockInit.CRACKED_BLUE_ICE_TILES);
+            event.accept(BlockInit.BLUE_ICE_PILLAR);
         }
     }
 

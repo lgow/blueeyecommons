@@ -8,7 +8,7 @@ import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import us.blueeyemods.blueeyecommons.Main;
-import us.blueeyemods.blueeyecommons.block.ModBlocks;
+import us.blueeyemods.blueeyecommons.init.BlockInit;
 
 @Mod.EventBusSubscriber(modid = Main.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModCreativeModeTabs {
@@ -17,7 +17,7 @@ public class ModCreativeModeTabs {
     @SubscribeEvent
     public static void registerCreativeModeTabs(CreativeModeTabEvent.Register event) {
         TAB = event.registerCreativeModeTab(new ResourceLocation(Main.MODID, "cold_biome_blocks"),
-                builder -> builder.icon(() -> new ItemStack(ModBlocks.PACKED_SNOW.get().asItem()))
+                builder -> builder.icon(() -> new ItemStack(BlockInit.PACKED_SNOW.get().asItem()))
                         .title(Component.translatable("creativemodetab.cold_biome_blocks")));
     }
 
