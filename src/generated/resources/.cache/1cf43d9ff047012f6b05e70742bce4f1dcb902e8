@@ -1,6 +1,0 @@
-// 1.19.4	2023-04-04T16:00:02.752019325	Tags for minecraft:block mod id blueeyecommons
-23b538f0d2d404004b0028c290487a386380bae4 data/minecraft/tags/blocks/ice.json
-26162991f933cb0216f72bfac62235f3dff164a5 data/minecraft/tags/blocks/mineable/pickaxe.json
-f5863e1014035edc9bf49fca520f72d3e99d42e5 data/minecraft/tags/blocks/mineable/shovel.json
-f6fc15798cdca1f6bf3beee8bfc8288b51578819 data/minecraft/tags/blocks/stairs.json
-8ed28beab1d50d19ce1c446bbd85d0a3947a5bc0 data/minecraft/tags/blocks/walls.json
